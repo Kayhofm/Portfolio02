@@ -1,17 +1,17 @@
 import { MDXRemote } from 'next-mdx-remote/rsc'
 
 const aboutContent = `
-# About Me
+
+
 
 <div className="max-w-4xl mx-auto px-4 py-16">
   <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
     <div className="lg:col-span-2">
-      ## Hello! I'm Kay Hofmeester
+      # About Me
 
-      Innovative Design Director with 15+ years of expertise in product innovation, AI, and managing design organizations at scale. Proven success in defining design strategy and vision, building high-performing design teams, and driving cross-functional excellence with Product and Engineering. Expert in establishing scalable design systems, directly contributing to design execution, championing user-centered design principles, and delivering industry-leading consumer products at Meta, Amazon, and Microsoft that enhance user engagement while maintaining quality.
+      ### Hello! I'm Kay Hofmeester
 
-      e-mail: kayhof@outlook.com  
-      portfolio: kayhofmeester.com
+      Innovative Design Director with 20+ years of expertise in product innovation, AI, and managing design organizations at scale. Proven success in defining design strategy and vision, building high-performing design teams, and driving cross-functional excellence with Product and Engineering. Expert in establishing scalable design systems, directly contributing to design execution, championing user-centered design principles, and delivering industry-leading consumer products at Meta, Amazon, and Microsoft that enhance user engagement while maintaining quality.
 
       **Strategic Vision and Executive Leadership:** Defined long-term design strategy and vision, collaborating with VP- / CEO-level executives (Bezos, Zuckerberg) to drive cross-functional excellence, align design efforts with business objectives at leading tech companies, and enhance user engagement
 
@@ -23,7 +23,7 @@ const aboutContent = `
 
       **Thought Leadership and Design Excellence:** Presented at leading conferences, authored influential publications, taught user-centered design principles, elevating design craft
 
-      ## Skills
+      ### Skills
 
       **Leadership and Management:** Team Building at Scale, Design Org Development, Exec Stakeholder Communication, Cross-Functional Partnership, Resource Planning, Team Mentorship, Adaptability
 
@@ -35,16 +35,18 @@ const aboutContent = `
 
       **Collaboration and Process:** Agile, Design Process Optimization, Workshop Facilitation, Design Operations
 
-      ## When I'm Not Designing
+      ### When I'm Not Designing
 
       Outside of design, you might find me:
-      - 📚 At improv
-      - 🎵 On the water or under water scuba diving
-      - 🏃‍♂️ At CrossFit
+      - 🎭 At improv
+      - ⛵ On the water sailing or kayaking
+      - 🤿 Under water scuba diving
+      - 🏋️ At CrossFit
+      - ✍️ Writing about design or health
 
-      ## Let's Connect
+      ### Let's Connect
 
-      I'm always interested in new opportunities, collaborations, or just having a chat about technology. Feel free to reach out!
+      I'm always interested in new opportunities, collaborations, or just having a chat about design or technology. Feel free to reach out!
     </div>
 
     <div className="lg:col-span-1">
@@ -52,32 +54,32 @@ const aboutContent = `
         ### Quick Facts
 
         **📍 Location:** Seattle, WA  
-        **💼 Experience:** 15+ years  
-        **🎓 Education:** Design Leadership  
+        **💼 Experience:** 20+ years  
+        **🎓 Education:** Delft University of Technology  
         **☕ Favorite Drink:** Coffee  
 
         ### Current Focus
 
         - Leading AI design initiatives
-        - Mentoring design leaders
+        - Building generative UX experiences
+        - Mentoring designers
         - Speaking at conferences
-        - Building design systems
 
         ### Expertise Areas
 
-        **Leadership:**
+        <strong>Leadership</strong><br />
         - Team Building at Scale
         - Design Organization Development
         - Executive Communication
         - Cross-Functional Partnership
 
-        **Design:**
+        <strong>Design</strong><br />
         - Product Strategy
         - User Experience Design
         - Design Systems
         - Prototyping
 
-        **Technology:**
+        <strong>Technology</strong><br />
         - AI/ML Product Design
         - Voice Interfaces
         - AR/VR Experiences
