@@ -13,7 +13,7 @@ export default async function ProjectsPage() {
             My Projects
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            A collection of products I've worked on, showcasing different approaches to problem-solving, team building and product scaling.
+            Strategic design initiatives spanning AI-powered products, emerging technologies, and complex systems, showcasing how thoughtful design leadership accelerates innovation and business growth.
           </p>
         </div>
 
