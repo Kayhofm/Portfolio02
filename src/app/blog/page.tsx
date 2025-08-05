@@ -29,7 +29,7 @@ export default async function BlogPage() {
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-0">
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      className="hover:text-green-600 dark:hover:text-green-400 transition-colors"
                     >
                       {post.frontmatter.title}
                     </Link>
@@ -60,7 +60,7 @@ export default async function BlogPage() {
                     {post.frontmatter.tags.map((tag: string) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full"
+                        className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full"
                       >
                         {tag}
                       </span>
@@ -70,7 +70,7 @@ export default async function BlogPage() {
 
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors"
+                  className="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 font-medium transition-colors"
                 >
                   Read more →
                 </Link>
@@ -118,7 +118,7 @@ export default async function BlogPage() {
 
         {/* Newsletter/CTA Section */}
         {posts.length > 0 && (
-          <div className="mt-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-8 text-center text-white">
+          <div className="mt-16 bg-gradient-to-r from-green-400 to-green-400 rounded-lg p-8 text-center text-white">
             <h2 className="text-2xl font-bold mb-4">
               Stay Updated
             </h2>
@@ -129,9 +129,9 @@ export default async function BlogPage() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500"
+                className="flex-1 px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500"
               />
-              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+              <button className="bg-white text-green-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
                 Subscribe
               </button>
             </div>

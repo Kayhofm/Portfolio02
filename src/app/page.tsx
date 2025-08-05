@@ -20,7 +20,7 @@ export default async function Home() {
               Featured Projects
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Here are some of my favorite projects that showcase my skills and passion for innovation.
+              Leading AI-powered product experiences that define new categories and shape the future of human-computer interaction.
             </p>
           </div>
           
@@ -58,15 +58,13 @@ export default async function Home() {
               Skills & Technologies
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Skills and technologies I work with to bring ideas to life.<br></br>
-              I coded this portfolio using Next.js, React, Tailwind CSS, and MDX.
+              Strategic design leadership capabilities and emerging technologies I leverage to build AI-powered products and scale design organizations.
             </p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {[
-              'React', 'Next.js', 'TypeScript', 'Node.js', 'Tailwind CSS',
-              'JavaScript', 'Git'
+              'Figma', 'Creative Suite', 'Design Systems', 'AI/ML', 'React', 'Next.js', 'Node.js', 'Typescript', 'OpenAI API', 'ProtoPie', 'Jira', 'Miro', 'FigJam', 'Confluence', 'Blender', 'Unity', 'AR/VR', 'Voice UI'
             ].map((skill) => (
               <div
                 key={skill}
@@ -85,10 +83,10 @@ export default async function Home() {
       <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Let's Work Together
+            Contact
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-            I'm always interested in new opportunities and exciting projects.
+            I'm always interested in new opportunities and design projects.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

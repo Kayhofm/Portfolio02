@@ -1,6 +1,45 @@
+'use client'
 import Image from 'next/image'
+import { useState, useEffect } from 'react'
 
 export default function Hero() {
+  // Design images for the top-right circle (larger)
+  const topCircleImages = [
+    '/images/MetaCupAnimation.gif',
+    '/images/MetaColorcube.gif',
+    '/images/MetaCounterAnimation.gif',
+    '/images/MetaButtonPeek.gif',
+    '/images/MetaDoorAnimation.gif'
+  ]
+
+  // Design images for the bottom-left circle (smaller)
+  const bottomCircleImages = [
+    '/images/MetaGenUX.png',
+    '/images/Orion_recipe.webp',
+    '/images/MetaRBMinitialApp01.png',
+    '/images/Alexa_GUI.png',
+    '/images/Health_AP_Hero Page Devices-2.png',
+    '/images/Agency_HKM_InternationalHome.JPG'
+  ]
+
+  const [currentTopImage, setCurrentTopImage] = useState(0)
+  const [currentBottomImage, setCurrentBottomImage] = useState(0)
+
+  useEffect(() => {
+    const topInterval = setInterval(() => {
+      setCurrentTopImage((prev) => (prev + 1) % topCircleImages.length)
+    }, 6500)
+
+    const bottomInterval = setInterval(() => {
+      setCurrentBottomImage((prev) => (prev + 1) % bottomCircleImages.length)
+    }, 5000)
+
+    return () => {
+      clearInterval(topInterval)
+      clearInterval(bottomInterval)
+    }
+  }, [topCircleImages.length, bottomCircleImages.length])
+
   return (
     <section className="bg-gradient-to-br from-green-50 to-lightgreen-100 dark:from-gray-900 dark:to-gray-800 py-20 lg:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,8 +52,9 @@ export default function Hero() {
               </span>
             </h1>
             <p className="mt-6 text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-              Innovative <strong>Design Director</strong> with 20+ years of expertise in product innovation, AI, and managing design organizations at scale. 
+              Innovative <strong>Design Leader</strong> with 20+ years of expertise in product innovation, AI, and managing design organizations at scale. 
               Proven success in defining design strategy and vision, building high-performing design teams, and driving cross-functional excellence with Product and Engineering. 
+              <br /><br />
               Expert in establishing scalable design systems, directly contributing to design execution, championing user-centered design principles, 
               and delivering industry-leading consumer products at Meta, Amazon, and Microsoft that enhance user engagement while maintaining quality.
             </p>
@@ -83,9 +123,26 @@ export default function Hero() {
                   />
                 </div>
               </div>
-              {/* Decorative elements */}
-              <div className="absolute top-4 right-4 w-24 h-24 bg-green-400 rounded-full opacity-20 animate-pulse delay-5000"></div>
-              <div className="absolute bottom-4 left-4 w-16 h-16 bg-green-200 rounded-full opacity-20 animate-pulse delay-3000"></div>
+              
+              {/* Design slideshow circles */}
+              <div className="absolute top-4 right-4 w-24 h-24 rounded-full overflow-hidden shadow-lg border-0 border-white/20">
+                <Image
+                  src={topCircleImages[currentTopImage]}
+                  alt="Design work sample"
+                  fill
+                  className="object-cover transition-opacity duration-500"
+                  sizes="96px"
+                />
+              </div>
+              <div className="absolute bottom-4 left-4 w-16 h-16 rounded-full overflow-hidden shadow-lg border-0 border-white/20">
+                <Image
+                  src={bottomCircleImages[currentBottomImage]}
+                  alt="Design work sample"
+                  fill
+                  className="object-cover transition-opacity duration-500"
+                  sizes="64px"
+                />
+              </div>
             </div>
           </div>
         </div>

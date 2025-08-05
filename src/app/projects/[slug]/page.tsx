@@ -20,22 +20,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   // Create complete components object with all your MDX features
   const mdxComponents = {
     h1: ({ children }: any) => (
-      <h1 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+      <h1 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white mt-8">
         {children}
       </h1>
     ),
     h2: ({ children }: any) => (
-      <h2 className="text-3xl font-semibold mb-4 text-gray-800 dark:text-gray-100 mt-12">
+      <h2 className="text-3xl font-semibold mb-4 text-gray-800 dark:text-gray-100 mt-0">
         {children}
       </h2>
     ),
     h3: ({ children }: any) => (
-      <h3 className="text-2xl font-medium mb-3 text-gray-700 dark:text-gray-200 mt-8">
+      <h3 className="text-2xl font-semibold mb-3 text-gray-700 dark:text-gray-200 mt-0">
         {children}
       </h3>
     ),
     p: ({ children }: any) => (
-      <p className="mb-6 text-gray-600 dark:text-gray-300 leading-relaxed">
+      <p className="mb-4 text-gray-600 dark:text-gray-300 leading-relaxed">
         {children}
       </p>
     ),
@@ -55,12 +55,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </blockquote>
     ),
     ul: ({ children }: any) => (
-      <ul className="mb-6 space-y-2 text-gray-600 dark:text-gray-300 list-disc list-outside pl-6">
+      <ul className="mb-3 space-y-1 text-gray-600 dark:text-gray-300 list-disc list-outside pl-6">
         {children}
       </ul>
     ),
     ol: ({ children }: any) => (
-      <ol className="mb-6 space-y-2 text-gray-600 dark:text-gray-300 list-decimal list-inside">
+      <ol className="mb-3 space-y-1 text-gray-600 dark:text-gray-300 list-decimal list-inside">
         {children}
       </ol>
     ),
@@ -149,6 +149,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     ),
     TextBlock: ({ children }: any) => (
       <div className="prose-sm">
+        {children}
+      </div>
+    ),
+    OneThirdTwoThird: ({ children }: any) => (
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 items-start">
         {children}
       </div>
     ),

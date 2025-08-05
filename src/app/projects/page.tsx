@@ -78,7 +78,7 @@ export default async function ProjectsPage() {
           <div className="mt-16 text-center">
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-8">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                Interested in Working Together?
+                Contact
               </h2>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 I'm always open to discussing new opportunities and exciting projects.

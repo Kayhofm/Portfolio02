@@ -3,6 +3,7 @@ import type { MDXComponents } from 'mdx/types'
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { usePassword } from '@/contexts/PasswordContext'
+import SimplePDFViewer from '@/components/SimplePDFViewer'
 
 // Custom image component for MDX content - simplified to avoid nesting issues
 function MDXImage({ 
@@ -310,6 +311,19 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         alt={alt || ''} 
         className="w-full rounded-lg my-4 block"
         {...props}
+      />
+    ),
+    OneThirdTwoThird: ({ children }: any) => (
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 items-start">
+        {children}
+      </div>
+    ),
+    SimplePDFViewer: ({ src, width, height, className }: any) => (
+      <SimplePDFViewer 
+        src={src} 
+        width={width} 
+        height={height} 
+        className={className} 
       />
     ),
     // Make custom components available in MDX
