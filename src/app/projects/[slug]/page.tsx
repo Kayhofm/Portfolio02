@@ -10,8 +10,9 @@ interface ProjectPageProps {
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { slug } = await params;
   const projects = await getContentData('projects')
-  const project = projects.find(p => p.slug === params.slug)
+  const project = projects.find(p => p.slug === slug)
 
   if (!project) {
     notFound()
@@ -83,7 +84,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         {children}
       </div>
     ),
-    MDXImage: ({ src, alt, width = "full", caption, align = "center" }: any) => {
+    MDXImage: ({ src, alt, width = "full", caption, align = "center", className = "" }: any) => {
       let widthClass = "w-full"
       if (width === "1/2") widthClass = "w-1/2"
       if (width === "1/3") widthClass = "w-1/3"
@@ -97,11 +98,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       
       return (
         <>
-          <img 
-            src={src} 
-            alt={alt} 
-            className={`${widthClass} h-auto object-cover rounded-lg mb-4 ${alignClass} block`}
-          />
+          <div className={`${className} ${alignClass} mb-4 rounded-lg overflow-hidden`}>
+            <img 
+              src={src} 
+              alt={alt} 
+              className={`${widthClass} h-auto object-cover block`}
+            />
+          </div>
           {caption && (
             <span className={`block text-sm text-gray-600 dark:text-gray-400 mb-6 italic ${
               align === "left" ? "text-left" : align === "right" ? "text-right" : "text-center"

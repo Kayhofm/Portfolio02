@@ -13,7 +13,8 @@ function MDXImage({
   height = "auto",
   caption,
   className = "",
-  align = "center"
+  align = "center",
+  style = {}
 }: {
   src: string
   alt: string
@@ -22,6 +23,7 @@ function MDXImage({
   caption?: string
   className?: string
   align?: "left" | "center" | "right"
+  style?: React.CSSProperties
 }) {
   const isFullWidth = width === "full"
   
@@ -60,11 +62,13 @@ function MDXImage({
   if (height === "auto") {
     return (
       <>
-        <img 
-          src={src} 
-          alt={alt} 
-          className={`${widthClass} h-auto object-cover rounded-lg mb-4 ${alignClass} block ${className}`}
-        />
+        <div className={`${className} ${alignClass} mb-4 rounded-lg overflow-hidden`} style={style}>
+          <img 
+            src={src} 
+            alt={alt} 
+            className={`${widthClass} h-auto object-cover block`}
+          />
+        </div>
         {caption && (
           <span className={`block text-sm text-gray-600 dark:text-gray-400 mb-6 italic ${
             align === "left" ? "text-left" : align === "right" ? "text-right" : "text-center"
@@ -78,15 +82,17 @@ function MDXImage({
 
   return (
     <>
-      <span className={`block relative ${widthClass} rounded-lg overflow-hidden mb-4 ${alignClass}`} style={{ height: typeof height === "number" ? `${height}px` : height }}>
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className={`object-cover ${className}`}
-          sizes="(max-width: 768px) 100vw, 800px"
-        />
-      </span>
+      <div className={`${className} ${alignClass} mb-4 rounded-lg overflow-hidden`} style={style}>
+        <span className={`block relative ${widthClass} rounded-lg overflow-hidden`} style={{ height: typeof height === "number" ? `${height}px` : height }}>
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 800px"
+          />
+        </span>
+      </div>
       {caption && (
         <span className={`block text-sm text-gray-600 dark:text-gray-400 mb-6 italic ${
           align === "left" ? "text-left" : align === "right" ? "text-right" : "text-center"
