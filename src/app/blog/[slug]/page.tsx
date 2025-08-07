@@ -5,9 +5,9 @@ import Link from 'next/link'
 import SimplePDFViewer from '@/components/SimplePDFViewer'
 
 interface BlogPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export default async function BlogPage({ params }: BlogPageProps) {

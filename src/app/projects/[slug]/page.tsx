@@ -4,9 +4,9 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import Link from 'next/link'
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {

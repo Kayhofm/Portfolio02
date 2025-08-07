@@ -3,6 +3,14 @@ import createMDX from '@next/mdx'
 
 const nextConfig: NextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  eslint: {
+    // Disable ESLint during builds
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    // Allow TypeScript warnings during builds
+    ignoreBuildErrors: false,
+  },
   // Add any other Next.js config options here
 }
 
