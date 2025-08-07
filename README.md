@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js, showcasing design leadership work, blog posts, and interactive projects. Features include MDX-powered content management, PDF slideshow integration, and a custom design system.
 
-First, run the development server:
+View Live Portfolio: www.kayhofmeester.com
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Modern Tech Stack: Built with Next.js 15, React, TypeScript, and Tailwind CSS
+- MDX Content Management: Blog posts and project descriptions written in MDX with custom components
+- Interactive PDF Viewer: Custom PDF slideshow component for presentations
+- Responsive Design: Mobile-first design that works on all devices
+- Dark Mode Support: Toggle between light and dark themes
+- Static Generation: Fast page loads with Next.js static generation
+- SEO Optimized: Built-in SEO features for better search visibility
+- Custom Components: Reusable MDX components for rich content layouts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Framework: Next.js 15
+- Language: TypeScript
+- Styling: Tailwind CSS
+- Content: MDX for blog posts and project pages
+- Deployment: Vercel
+- Font: Lato
 
-## Learn More
+### Project Structure
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+portfolio02/<br />
+├── src/<br />
+│ ├── app/ # Next.js app directory<br />
+│ │ ├── blog/ # Blog pages and dynamic routes<br />
+│ │ ├── projects/ # Project pages and dynamic routes<br />
+│ │ └── components/ # React components<br />
+│ ├── components/ # Reusable UI components<br />
+│ ├── content/ # MDX content files<br />
+│ │ ├── blog/ # Blog post MDX files<br />
+│ │ └── projects/ # Project MDX files<br />
+│ └── lib/ # Utility functions<br />
+├── public/ # Static assets<br />
+│ ├── images/ # Project and blog images<br />
+│ └── pdfs/ # PDF presentations<br />
+├── mdx-components.tsx # Global MDX component definitions<br />
+└── next.config.js # Next.js configuration<br />
