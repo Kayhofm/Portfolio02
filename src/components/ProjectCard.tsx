@@ -66,7 +66,7 @@ export default function ProjectCard({
             {tech.map((technology) => (
               <span
                 key={technology}
-                className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full"
+                className="px-3 py-1 bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-200 text-sm rounded-full"
               >
                 {technology}
               </span>

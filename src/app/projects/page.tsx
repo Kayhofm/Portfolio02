@@ -85,7 +85,7 @@ export default async function ProjectsPage() {
               </p>
               <a
                 href="mailto:your.email@example.com"
-                className="bg-green-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors inline-block"
+                className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-emerald-700 transition-colors inline-block"
               >
                 Get In Touch
               </a>

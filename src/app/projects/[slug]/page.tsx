@@ -168,7 +168,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         {/* Back Button */}
         <Link
           href="/projects"
-          className="inline-flex items-center text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 mb-8"
+          className="inline-flex items-center text-emerald-600 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 mb-8"
         >
           <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -194,7 +194,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               {project.frontmatter.tech.map((technology: string) => (
                 <span
                   key={technology}
-                  className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm rounded-full"
+                  className="px-3 py-1 bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-200 text-sm rounded-full"
                 >
                   {technology}
                 </span>
@@ -250,7 +250,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <div className="flex justify-center">
             <Link
               href="/projects"
-              className="bg-green-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
+              className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-emerald-700 transition-colors"
             >
               View All Projects
             </Link>

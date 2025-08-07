@@ -41,13 +41,13 @@ export default function Hero() {
   }, [topCircleImages.length, bottomCircleImages.length])
 
   return (
-    <section className="bg-gradient-to-br from-green-50 to-lightgreen-100 dark:from-gray-900 dark:to-gray-800 py-20 lg:py-32">
+    <section className="bg-gradient-to-br from-emerald-50 to-lightemerald-100 dark:from-gray-900 dark:to-gray-800 py-20 lg:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
           <div className="lg:col-span-6">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl lg:text-6xl">
               Hi, I'm{' '}
-              <span className="text-green-600 dark:text-green-400">
+              <span className="text-emerald-600 dark:text-emerald-400">
                 Kay Hofmeester
               </span>
             </h1>
@@ -61,7 +61,7 @@ export default function Hero() {
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
                 href="/projects"
-                className="bg-green-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors text-center"
+                className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-emerald-700 transition-colors text-center"
               >
                 View My Work
               </a>
