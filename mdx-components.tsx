@@ -4,6 +4,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import { usePassword } from '@/contexts/PasswordContext'
 import SimplePDFViewer from '@/components/SimplePDFViewer'
+// import ProtectedContent from '@/components/ProtectedContent'
 
 // Custom image component for MDX content - simplified to avoid nesting issues
 function MDXImage({ 
@@ -131,7 +132,35 @@ function TextBlock({ children }: { children: React.ReactNode }) {
   )
 }
 
-// Video component for MDX content
+function ProtectedContent({ 
+  type = "image",
+  protectedSrc, 
+  placeholderSrc, 
+  alt,
+  caption 
+}: {
+  type?: "image" | "video"
+  protectedSrc: string
+  placeholderSrc: string  
+  alt: string
+  caption?: string
+}) {
+  // For now, always show placeholder during build/prerendering
+  // The client-side unlock will be added later
+  return (
+    <div className="relative">
+      <MDXImage src={placeholderSrc} alt={alt} />
+      <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center rounded-lg">
+        <div className="text-white text-center p-4">
+          <h3 className="font-semibold mb-2">Protected Design Work</h3>
+          <p className="text-sm opacity-90">Available for portfolio review</p>
+        </div>
+      </div>
+      {caption && <span className="block text-center text-sm text-gray-600 dark:text-gray-400 mt-3 italic">{caption}</span>}
+    </div>
+  )
+}
+
 function MDXVideo({ 
   src, 
   width = "full",
@@ -194,7 +223,6 @@ function MDXVideo({
   )
 }
 
-// Protected Video component
 function ProtectedVideo({ 
   videoSrc, 
   imageSrc, 
@@ -339,6 +367,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ImageGallery,
     TwoColumn,
     TextBlock,
+    ProtectedContent,
     ...components,
   }
 }

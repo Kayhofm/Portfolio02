@@ -1,7 +1,9 @@
+
 import { notFound } from 'next/navigation'
 import { getContentData } from '@/lib/utils'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import Link from 'next/link'
+import ClientProtectedContent from '@/components/ClientProtectedContent'
 
 interface ProjectPageProps {
   params: Promise<{
@@ -17,6 +19,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   if (!project) {
     notFound()
   }
+
+  const ProtectedContent = (props: any) => <ClientProtectedContent {...props} />
 
   // Create complete components object with all your MDX features
   const mdxComponents = {
@@ -160,6 +164,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         {children}
       </div>
     ),
+    ProtectedContent,
   }
 
   return (
