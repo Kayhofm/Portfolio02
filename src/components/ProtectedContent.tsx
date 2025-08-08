@@ -34,8 +34,8 @@ export default function ProtectedContent({
       <MDXImage src={placeholderSrc} alt={alt} />
       <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center rounded-lg">
         <div className="text-white text-center p-4">
-          <h3 className="font-semibold mb-2">Protected Design Work</h3>
-          <p className="text-sm opacity-90">Available for portfolio review</p>
+          <h3 className="font-semibold mb-2">Content Sample</h3>
+          <p className="text-sm opacity-90">Full video/animation available upon request</p>
         </div>
       </div>
       {caption && <span className="block text-center text-sm text-gray-600 dark:text-gray-400 mt-3 italic">{caption}</span>}
