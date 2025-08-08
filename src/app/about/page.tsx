@@ -51,15 +51,17 @@ const aboutContent = `
       <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
 
         <div className="text-center">
-          <a 
-            href="/pdfs/KayHofmeester_Resume.pdf" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-1 bg-emerald-300 hover:bg-emerald-400 text-white font-bold rounded-lg transition-colors duration-200"
-          >
-            📄 Resume
-          </a>
+
+        <a 
+          href="/pdfs/KayHofmeester_Resume.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-block px-12 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg transition-colors duration-200 text-lg leading-none"
+        >Resume</a>
+
         </div>
+
+        <br />
 
         ### Quick Facts
 
