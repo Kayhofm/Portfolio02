@@ -125,7 +125,7 @@ export default function Hero() {
               </div>
               
               {/* Design slideshow circles */}
-              <div className="absolute top-4 right-4 w-24 h-24 rounded-full overflow-hidden shadow-lg border-0 border-white/20">
+              <div className="absolute top-4 right-4 w-36 h-36 rounded-full overflow-hidden shadow-lg border-0 border-white/20">
                 <Image
                   src={topCircleImages[currentTopImage]}
                   alt="Design work sample"
@@ -134,7 +134,7 @@ export default function Hero() {
                   sizes="96px"
                 />
               </div>
-              <div className="absolute bottom-4 left-4 w-16 h-16 rounded-full overflow-hidden shadow-lg border-0 border-white/20">
+              <div className="absolute bottom-4 left-4 w-28 h-28 rounded-full overflow-hidden shadow-lg border-0 border-white/20">
                 <Image
                   src={bottomCircleImages[currentBottomImage]}
                   alt="Design work sample"
