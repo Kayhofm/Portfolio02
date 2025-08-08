@@ -2,8 +2,6 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 
 const aboutContent = `
 
-
-
 <div className="max-w-4xl mx-auto px-4 py-16">
   <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
     <div className="lg:col-span-2">
@@ -51,6 +49,18 @@ const aboutContent = `
 
     <div className="lg:col-span-1">
       <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+
+        <div className="text-center">
+          <a 
+            href="/pdfs/KayHofmeester_Resume.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-8 py-1 bg-emerald-300 hover:bg-emerald-400 text-white font-bold rounded-lg transition-colors duration-200"
+          >
+            📄 Resume
+          </a>
+        </div>
+
         ### Quick Facts
 
         **📍 Location:** Seattle, WA  
@@ -128,6 +138,31 @@ export default function AboutPage() {
         {children}
       </strong>
     ),
+    a: ({ href, children, ...props }: any) => {
+      if (href?.includes('Resume') || href?.includes('resume')) {
+        return (
+          <a 
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-emerald-600 px-8 py-3 rounded-lg font-medium hover:bg-emerald-700 transition-colors inline-flex items-center justify-center mb-4 [&>p]:mb-0"
+            {...props}
+          >
+            {children}
+          </a>
+        )
+      }
+      // Regular link styling
+      return (
+        <a 
+          href={href}
+          className="text-blue-600 hover:text-blue-800 underline"
+          {...props}
+        >
+          {children}
+        </a>
+      )
+    },
   }
 
   return (
