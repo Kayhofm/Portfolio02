@@ -119,7 +119,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </>
       )
     },
-    MDXVideo: ({ src, width = "full", caption, autoplay = false, loop = false, muted = true, controls = true }: any) => {
+    MDXVideo: ({ src, width = "full", caption, autoplay = false, loop = false, muted = true, controls = true, className = "" }: any) => {
       let widthClass = "w-full"
       if (width === "1/2") widthClass = "w-1/2"
       if (width === "1/3") widthClass = "w-1/3"
@@ -130,7 +130,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       return (
         <>
           <video 
-            className={`${widthClass} h-auto rounded-lg mb-4 mx-auto block`}
+            className={`${widthClass} h-auto rounded-lg mb-4 mx-auto block ${className}`}
             autoPlay={autoplay}
             loop={loop}
             muted={muted}
