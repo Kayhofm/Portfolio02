@@ -3,23 +3,23 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
 export default function Hero() {
-  // Design images for the top-right circle (larger)
+  // Design images for the top-right circle (smaller)
   const topCircleImages = [
-    '/images/MetaCupAnimation.gif',
-    '/images/MetaColorcube.gif',
-    '/images/MetaCounterAnimation.gif',
-    '/images/MetaButtonPeek.gif',
-    '/images/MetaDoorAnimation.gif'
-  ]
-
-  // Design images for the bottom-left circle (smaller)
-  const bottomCircleImages = [
     '/images/MetaGenUX.png',
     '/images/Orion_recipe.webp',
     '/images/MetaRBMinitialApp01.png',
     '/images/Alexa_GUI.png',
     '/images/Health_AP_Hero Page Devices-2.png',
     '/images/Agency_HKM_InternationalHome.JPG'
+  ]
+
+  // Design images for the bottom-left circle (larger)
+  const bottomCircleImages = [
+    '/images/MetaCupAnimation.gif',
+    '/images/MetaColorcube.gif',
+    '/images/MetaCounterAnimation.gif',
+    '/images/MetaButtonPeek.gif',
+    '/images/MetaDoorAnimation.gif'
   ]
 
   const [currentTopImage, setCurrentTopImage] = useState(0)
@@ -125,7 +125,7 @@ export default function Hero() {
               </div>
               
               {/* Design slideshow circles */}
-              <div className="absolute top-4 right-4 w-36 h-36 rounded-full overflow-hidden shadow-lg border-0 border-white/20">
+              <div className="absolute top-4 right-4 w-28 h-28 rounded-full overflow-hidden shadow-lg border-0 border-white/20">
                 <Image
                   src={topCircleImages[currentTopImage]}
                   alt="Design work sample"
@@ -134,7 +134,7 @@ export default function Hero() {
                   sizes="96px"
                 />
               </div>
-              <div className="absolute bottom-4 left-4 w-28 h-28 rounded-full overflow-hidden shadow-lg border-0 border-white/20">
+              <div className="absolute bottom-4 left-4 w-36 h-36 rounded-full overflow-hidden shadow-lg border-0 border-white/20">
                 <Image
                   src={bottomCircleImages[currentBottomImage]}
                   alt="Design work sample"

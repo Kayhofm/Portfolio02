@@ -1,4 +1,3 @@
-
 import { notFound } from 'next/navigation'
 import { getContentData } from '@/lib/utils'
 import { MDXRemote } from 'next-mdx-remote/rsc'
@@ -19,6 +18,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   if (!project) {
     notFound()
   }
+
+  // Add navigation logic
+  const currentIndex = projects.findIndex(p => p.slug === slug)
+  const previousProject = currentIndex > 0 ? projects[currentIndex - 1] : null
+  const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null
 
   const ProtectedContent = (props: any) => <ClientProtectedContent {...props} />
 
@@ -247,18 +251,52 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           />
         </div>
 
-        {/* Related Projects */}
+        {/* Navigation Section */}
         <div className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-            More Projects
-          </h2>
-          <div className="flex justify-center">
+          <div className="flex justify-between items-center">
+            {/* Previous Project */}
+            {previousProject ? (
+              <Link
+                href={`/projects/${previousProject.slug}`}
+                className="flex items-center text-emerald-600 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300"
+              >
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                <div className="text-left">
+                  <div className="text-sm text-gray-500 dark:text-gray-400">Previous</div>
+                  <div className="font-medium">{previousProject.frontmatter.title}</div>
+                </div>
+              </Link>
+            ) : (
+              <div></div>
+            )}
+
+            {/* View All Projects - Center */}
             <Link
               href="/projects"
               className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-emerald-700 transition-colors"
             >
               View All Projects
             </Link>
+
+            {/* Next Project */}
+            {nextProject ? (
+              <Link
+                href={`/projects/${nextProject.slug}`}
+                className="flex items-center text-emerald-600 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 text-right"
+              >
+                <div className="text-right">
+                  <div className="text-sm text-gray-500 dark:text-gray-400">Next</div>
+                  <div className="font-medium">{nextProject.frontmatter.title}</div>
+                </div>
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            ) : (
+              <div></div>
+            )}
           </div>
         </div>
       </div>

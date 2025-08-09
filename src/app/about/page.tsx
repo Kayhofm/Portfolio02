@@ -56,8 +56,8 @@ const aboutContent = `
           href="/pdfs/KayHofmeester_Resume.pdf" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="inline-block px-12 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg transition-colors duration-200 text-lg leading-none"
-        >Resume</a>
+          className="inline-block px-7 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg transition-colors duration-200 text-lg leading-none"
+        >Download Resume</a>
 
         </div>
 
