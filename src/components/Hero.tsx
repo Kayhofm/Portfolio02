@@ -41,7 +41,7 @@ export default function Hero() {
   }, [topCircleImages.length, bottomCircleImages.length])
 
   return (
-    <section className="bg-gradient-to-br from-emerald-50 to-lightemerald-100 dark:from-gray-900 dark:to-gray-800 py-20 lg:py-32">
+    <section className="bg-gradient-to-br from-emerald-100 to-lightemerald-700 dark:from-gray-900 dark:to-gray-800 pt-20 lg:pt-32 pb-8 lg:pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
           <div className="lg:col-span-6">
