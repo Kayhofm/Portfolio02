@@ -1,101 +1,66 @@
 import { MDXRemote } from 'next-mdx-remote/rsc'
 
-const aboutContent = `
+const startHereContent = `
 
 <div className="max-w-4xl mx-auto px-4 py-16">
   <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
     <div className="lg:col-span-2">
-      # About Me
+      # Start Here
 
-      ### Hello! I'm Kay Hofmeester
+      Design Leader & player‑coach — I build v1s, scale design orgs, and prototype the path to launch. Former Meta, Amazon, Microsoft.
 
-      Innovative Design Leader with 20+ years of expertise in product innovation, AI, and managing design organizations at scale. Proven success in defining design strategy and vision, building high-performing design teams, and driving cross-functional excellence with Product and Engineering. Expert in establishing scalable design systems, directly contributing to design execution, championing user-centered design principles, and delivering industry-leading consumer products at Meta, Amazon, and Microsoft that enhance user engagement while maintaining quality.
+      Target roles: Senior Design Manager • Design Director • Head of Design (hands‑on)
 
-      **Strategic Vision and Executive Leadership:** Defined long-term design strategy and vision, collaborating with VP- / CEO-level executives (Bezos, Zuckerberg) to drive cross-functional excellence, align design efforts with business objectives at leading tech companies, and enhance user engagement
+      ### What I'm hired to do
 
-      **High-Performing Team Leadership:** Built, mentored, and led 12+ multi-disciplinary design teams at scale across product design, prototyping, conversation design, and user research, establishing mature design organizations, including mentoring senior designers and managers
+      - Ship v1s: take ambiguous 0→1 initiatives to an executive‑fundable product vision and working prototypes.
+      - Scale orgs: structure teams, rituals, and quality bars for multi‑team execution.
+      - Prototype to decide: reduce risk with coded proofs (React/Node/ProtoPie), design systems, and evaluative studies.
 
-      **User-Centered Innovation:** Delivered industry-leading UX solutions for consumer products including wearable devices, multimodal inputs (touch, voice, hands, gaze), and AI-powered technologies
+      ### Quick stats
 
-      **Design Systems and Technology Development:** Filed 30+ patents and drove scalable innovation in AI (vision and activity models), voice (TTS, ASR, NLU), and AR (display and rendering) technologies, establishing design principles and frameworks for consistency across platforms
+      12+ design/prototyping teams built and led
 
-      **Thought Leadership and Design Excellence:** Presented at leading conferences, authored influential publications, taught user-centered design principles, elevating design craft
+      30+ patents (AI vision/activity models, voice, AR)
 
-      ### Skills
+      4 flagship platforms: Alexa • Microsoft Health • Meta AR (Orion/Ray‑Ban) • Microsoft Windows
 
-      **Leadership and Management:** Team Building at Scale, Design Org Development, Exec Stakeholder Communication, Cross-Functional Partnership, Resource Planning, Team Mentorship, Adaptability
+      Hands‑on: React/Node, prototyping, interaction design, conversation design, vision artifacts, design systems
 
-      **Strategy and Vision:** Design Strategy and Roadmapping, Strategic Vision and Long-Term Planning, Innovation and Emerging Technology, Business Objective Alignment, Product Strategy
+      Contact: kayhof@outlook.com • LinkedIn /kayhofmeester
+      <br />
 
-      **Design Systems and Quality:** Scalable Design Principles, Design System Development, Design Quality Standards, Platform Consistency, Rapid Prototyping
-
-      **User-Centered Design:** User Research Integration, Data-Informed Decisions, Customer Journey Optimization, Usability, User Engagement and Retention
-
-      **Collaboration and Process:** Agile, Design Process Optimization, Workshop Facilitation, Design Operations
-
-      ### When I'm Not Designing
-
-      Outside of design, you might find me:
-      - 🎭 At improv
-      - ⛵ On the water sailing or kayaking
-      - 🤿 Under water scuba diving
-      - 🏋️ At CrossFit
-      - ✍️ Writing about design or health
-
-      ### Let's Connect
-
-      I'm always interested in new opportunities, collaborations, or just having a chat about design or technology. Feel free to reach out!
-    </div>
-
-    <div className="lg:col-span-1">
-      <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-
-        <div className="text-center">
-
+      <div className="text-center">
         <a 
           href="/pdfs/KayHofmeester_Resume.pdf" 
           target="_blank" 
           rel="noopener noreferrer"
           className="inline-block px-7 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg transition-colors duration-200 text-lg leading-none"
         >Download Resume</a>
+      </div>
+    </div>
 
-        </div>
+    <div className="lg:col-span-1">
+      <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
 
-        <br />
+        <MDXImage
+          src="/images/Health_AP_Hero Page Devices-2.png"
+          alt="Microsoft Band app"
+          caption="Microsoft Health - Increased user engagement 10x"
+        />
 
-        ### Quick Facts
+        <MDXImage
+          src="/images/AlexaHero.png"
+          alt="Alexa app"
+          caption="Amazon Alexa - Sold 10x forecast"
+        />
 
-        **📍 Location:** Seattle, WA  
-        **💼 Experience:** 20+ years  
-        **🎓 Education:** Delft University of Technology  
-        **☕ Favorite Drink:** Coffee  
-
-        ### Current Focus
-
-        - Leading AI design initiatives
-        - Building generative UX experiences
-        - Mentoring designers
-        - Speaking at conferences
-
-        ### Expertise Areas
-
-        <strong>Leadership</strong><br />
-        - Team Building at Scale
-        - Design Organization Development
-        - Executive Communication
-        - Cross-Functional Partnership
-
-        <strong>Design</strong><br />
-        - Product Strategy
-        - User Experience Design
-        - Design Systems
-        - Prototyping
-
-        <strong>Technology</strong><br />
-        - AI/ML Product Design
-        - Voice Interfaces
-        - AR/VR Experiences
-        - Multimodal Interactions
+        <MDXImage
+          src="/images/MetaOrionWomanScreens.webp"
+          alt="Scenario overview"
+          caption="Meta Orion - 'This might be the best look into the future of tech that I've ever seen.' - MKBHD"
+        />
+        
       </div>
     </div>
 
@@ -103,7 +68,105 @@ const aboutContent = `
 </div>
 `
 
-export default function AboutPage() {
+// Custom image component for MDX content - simplified to avoid nesting issues
+function MDXImage({ 
+  src, 
+  alt, 
+  width = "full",
+  height = "auto",
+  caption,
+  className = "",
+  align = "center",
+  style = {}
+}: {
+  src: string
+  alt: string
+  width?: string | number
+  height?: string | number
+  caption?: string
+  className?: string
+  align?: "left" | "center" | "right"
+  style?: React.CSSProperties
+}) {
+  const isFullWidth = width === "full"
+  
+  // Handle width classes properly
+  let widthClass = "w-full"
+  if (!isFullWidth) {
+    if (typeof width === "number") {
+      widthClass = `w-[${width}px]`
+    } else if (width === "1/2") {
+      widthClass = "w-1/2"
+    } else if (width === "1/3") {
+      widthClass = "w-1/3"
+    } else if (width === "2/3") {
+      widthClass = "w-2/3"
+    } else if (width === "1/4") {
+      widthClass = "w-1/4"
+    } else if (width === "3/4") {
+      widthClass = "w-3/4"
+    } else {
+      widthClass = `w-${width}`
+    }
+  }
+
+  // Handle alignment classes
+  let alignClass = ""
+  if (!isFullWidth) {
+    if (align === "left") {
+      alignClass = "mr-auto ml-0"
+    } else if (align === "right") {
+      alignClass = "ml-auto mr-0"
+    } else {
+      alignClass = "mx-auto"
+    }
+  }
+
+  if (height === "auto") {
+    return (
+      <>
+        <div className={`${className} ${alignClass} mb-4 rounded-lg overflow-hidden`} style={style}>
+          <img 
+            src={src} 
+            alt={alt} 
+            className={`${widthClass} h-auto object-cover block`}
+          />
+        </div>
+        {caption && (
+          <span className={`block text-sm text-gray-600 dark:text-gray-400 mb-6 italic ${
+            align === "left" ? "text-left" : align === "right" ? "text-right" : "text-center"
+          }`}>
+            {caption}
+          </span>
+        )}
+      </>
+    )
+  }
+
+  // Return for non-auto height (you had this missing)
+  return (
+    <>
+      <div className={`${className} ${alignClass} mb-4 rounded-lg overflow-hidden`} style={style}>
+        <span className={`block relative ${widthClass} rounded-lg overflow-hidden`} style={{ height: typeof height === "number" ? `${height}px` : height }}>
+          <img
+            src={src}
+            alt={alt}
+            className="w-full h-full object-cover"
+          />
+        </span>
+      </div>
+      {caption && (
+        <span className={`block text-sm text-gray-600 dark:text-gray-400 mb-6 italic ${
+          align === "left" ? "text-left" : align === "right" ? "text-right" : "text-center"
+        }`}>
+          {caption}
+        </span>
+      )}
+    </>
+  )
+}
+
+export default function StartHerePage() {
   const mdxComponents = {
     h1: ({ children }: any) => (
       <h1 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
@@ -165,11 +228,12 @@ export default function AboutPage() {
         </a>
       )
     },
+    MDXImage,
   }
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
-      <MDXRemote source={aboutContent} components={mdxComponents} />
+      <MDXRemote source={startHereContent} components={mdxComponents} />
     </div>
   )
 }

@@ -73,6 +73,14 @@ export default function Hero() {
               </a>
             </div>
             
+           <h3 className="text-2xl font-medium mb-3 text-gray-700 dark:text-gray-200 mt-6">Quick stats</h3>
+            <ul className="mb-6 space-y-1 text-gray-600 dark:text-gray-300 list-disc list-outside pl-6">
+              <li>12+ design/prototyping teams of up to 25+ built and led</li>
+              <li>4 flagship platforms: Alexa • Microsoft Health • Meta AR (Orion/Ray‑Ban) • Microsoft Windows</li>
+              <li>Hands‑on: React/Node, prototyping, interaction design, conversation design, vision artifacts, design systems</li>
+              <li>30+ patents (AI vision/activity models, voice, AR)</li>
+            </ul>
+
             {/* Social Links */}
             <div className="mt-8 flex space-x-6">
               <a
