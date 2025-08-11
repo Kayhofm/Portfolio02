@@ -69,7 +69,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </ul>
     ),
     ol: ({ children }: any) => (
-      <ol className="mb-3 space-y-1 text-gray-600 dark:text-gray-300 list-decimal list-inside">
+      <ol className="mb-3 space-y-1 text-gray-600 dark:text-gray-300 list-decimal list-outside pl-6">
         {children}
       </ol>
     ),
