@@ -3,6 +3,7 @@ import { Lato } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import { PasswordProvider } from '@/contexts/PasswordContext'
+import { Analytics } from "@vercel/analytics/next"
 
 const lato = Lato({ 
   subsets: ['latin'],
@@ -29,6 +30,7 @@ export default function RootLayout({
             {children}
           </main>
         </PasswordProvider>
+        <Analytics />
       </body>
     </html>
   )
