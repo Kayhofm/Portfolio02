@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
 
     // Send email using Resend
     const data = await resend.emails.send({
-      from: 'contact@yourdomain.com', // Use your verified domain
+      from: 'onboarding@resend.dev', // Use your verified domain
       to: ['kayhof@outlook.com'],
       subject: `Portfolio Contact: ${subject}`,
       html: `
