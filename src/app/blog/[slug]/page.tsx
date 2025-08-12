@@ -141,6 +141,22 @@ export default async function BlogPage({ params }: BlogPageProps) {
         className={className} 
       />
     ),
+a: ({ href, children, ...props }: any) => {
+  // Check if it's an external link
+  const isExternal = href?.startsWith('http')
+  
+  return (
+    <a 
+      href={href}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
+      className="text-emerald-600 hover:text-emerald-800 underline"
+      {...props}
+    >
+      {children}
+    </a>
+  )
+},
   }
 
   return (
