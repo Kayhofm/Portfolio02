@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 interface ProjectCardProps {
   title: string
+  role?: string
   description: string
   image?: string
   tech: string[]
@@ -14,6 +15,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({
   title,
+  role,
   description,
   image,
   tech,
@@ -57,6 +59,13 @@ export default function ProjectCard({
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
             {title}
           </h3>
+          
+          {role && (
+            <p className="text-lg font-medium text-emerald-600 dark:text-emerald-400 mb-2">
+              {role}
+            </p>
+          )}
+          
           <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
             {description}
           </p>

@@ -9,7 +9,7 @@ const aboutContent = `
 
       ### Hello! I'm Kay Hofmeester
 
-      Innovative Design Leader with 20+ years of expertise in product innovation, AI, and managing design organizations at scale. Proven success in defining design strategy and vision, building high-performing design teams, and driving cross-functional excellence with Product and Engineering. Expert in establishing scalable design systems, directly contributing to design execution, championing user-centered design principles, and delivering industry-leading consumer products at Meta, Amazon, and Microsoft that enhance user engagement while maintaining quality.
+      Design Leader with 20+ years of expertise in product innovation, AI, and managing design organizations at scale. Proven success in defining strategy and vision, building high-performing teams of 25+, and driving cross-functional excellence with Product and Engineering. Expert in establishing scalable design systems, directly contributing to execution, championing user-centered design principles, and delivering industry-leading consumer products at Meta, Amazon, and Microsoft that enhance user engagement while maintaining quality.
 
       **Strategic Vision and Executive Leadership:** Defined long-term design strategy and vision, collaborating with VP- / CEO-level executives (Bezos, Zuckerberg) to drive cross-functional excellence, align design efforts with business objectives at leading tech companies, and enhance user engagement
 

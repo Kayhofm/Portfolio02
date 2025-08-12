@@ -69,7 +69,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </ul>
     ),
     ol: ({ children }: any) => (
-      <ol className="mb-3 space-y-1 text-gray-600 dark:text-gray-300 list-decimal list-outside pl-6">
+      <ol className="mb-3 space-y-1 text-gray-600 dark:text-gray-300 list-decimal list-inside">
         {children}
       </ol>
     ),
@@ -169,11 +169,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </div>
     ),
     ProtectedContent,
-    SpeakerIcon: ({ className = "h-6 w-6" }: any) => (
-      <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
-      </svg>
-  ),
   }
 
   return (
@@ -258,6 +253,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
         {/* Navigation Section */}
         <div className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+            More Projects
+          </h2>
           <div className="flex justify-between items-center">
             {/* Previous Project */}
             {previousProject ? (

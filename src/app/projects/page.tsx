@@ -24,9 +24,10 @@ export default async function ProjectsPage() {
               <ProjectCard
                 key={project.slug}
                 title={project.frontmatter.title}
+                role={project.frontmatter.role}
                 description={project.frontmatter.description}
                 image={project.frontmatter.image}
-                imageCrop={project.frontmatter.imageCrop}  // Add this line
+                imageCrop={project.frontmatter.imageCrop}
                 tech={project.frontmatter.tech || []}
                 github={project.frontmatter.github}
                 demo={project.frontmatter.demo}

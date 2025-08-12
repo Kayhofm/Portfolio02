@@ -52,11 +52,10 @@ export default function Hero() {
               </span>
             </h1>
             <p className="mt-6 text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-              Innovative <strong>Design Leader</strong> with 20+ years of expertise in product innovation, AI, and managing design organizations at scale. 
-              Proven success in defining design strategy and vision, building high-performing design teams, and driving cross-functional excellence with Product and Engineering. 
-              <br /><br />
-              Expert in establishing scalable design systems, directly contributing to design execution, championing user-centered design principles, 
-              and delivering industry-leading consumer products at Meta, Amazon, and Microsoft that enhance user engagement while maintaining quality.
+              <strong>Design Leader</strong> with 20+ years in AI and product innovation at Meta, Amazon, and Microsoft. 
+              I define strategy and vision, build and lead teams of 25+, and partner tightly with Product and Engineering to ship. 
+              I scale design systems and stay hands-on to deliver 0→1 launches. 
+              30+ patents across AI, voice, AR, and input.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
@@ -72,14 +71,6 @@ export default function Hero() {
                 About Me
               </a>
             </div>
-            
-           <h3 className="text-2xl font-medium mb-3 text-gray-700 dark:text-gray-200 mt-6">Quick stats</h3>
-            <ul className="mb-6 space-y-1 text-gray-600 dark:text-gray-300 list-disc list-outside pl-6">
-              <li>12+ design/prototyping teams of up to 25+ built and led</li>
-              <li>4 flagship platforms: Alexa • Microsoft Health • Meta AR (Orion/Ray‑Ban) • Microsoft Windows</li>
-              <li>Hands‑on: React/Node, prototyping, interaction design, conversation design, vision artifacts, design systems</li>
-              <li>30+ patents (AI vision/activity models, voice, AR)</li>
-            </ul>
 
             {/* Social Links */}
             <div className="mt-8 flex space-x-6">
