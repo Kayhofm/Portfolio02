@@ -4,6 +4,7 @@ import './globals.css'
 import Navigation from '@/components/Navigation'
 import { PasswordProvider } from '@/contexts/PasswordContext'
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const lato = Lato({ 
   subsets: ['latin'],
@@ -31,6 +32,7 @@ export default function RootLayout({
           </main>
         </PasswordProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
