@@ -51,8 +51,77 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* Recommendations Section */}
+      <section className="py-16 bg-white dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              What People Say
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Trusted by leaders and designers across the industry to deliver exceptional design outcomes.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Recommendation 1 */}
+            <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-8 relative">
+              <div className="mb-6">
+                <svg className="w-8 h-8 text-emerald-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                </svg>
+              </div>
+              <blockquote className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                "Kay is a one-of-a-kind design leader—someone who not only pushes the boundaries of what’s possible but also ensures every detail is considered along the way. He has a rare ability to obsess over both strategy and execution, making complex ideas feel simple and innovative experiences feel inevitable."
+              </blockquote>
+              <div className="border-t border-gray-200 dark:border-gray-600 pt-4">
+                <div className="font-semibold text-gray-900 dark:text-white">Oscar Murillo</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Senior Design Director, Oracle</div>
+                <div className="text-sm text-gray-500 dark:text-gray-500">2025</div>
+              </div>
+            </div>
+
+            {/* Recommendation 2 */}
+            <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-8 relative">
+              <div className="mb-6">
+                <svg className="w-8 h-8 text-emerald-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                </svg>
+              </div>
+              <blockquote className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                "As a designer, Kay is curious and dedicated to his craft ... 
+                As a manager, and mentor, Kay fosters growth, curiosity, and excellence. His guidance has significantly impacted my design career. I wholeheartedly endorse Kay as a visionary leader and innovator in whatever industry he pursues."
+              </blockquote>
+              <div className="border-t border-gray-200 dark:border-gray-600 pt-4">
+                <div className="font-semibold text-gray-900 dark:text-white">Annika Rodrigues</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Product Designer at Meta</div>
+                <div className="text-sm text-gray-500 dark:text-gray-500">2025</div>
+              </div>
+            </div>
+
+            {/* Recommendation 3 */}
+            <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-8 relative">
+              <div className="mb-6">
+                <svg className="w-8 h-8 text-emerald-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                </svg>
+              </div>
+              <blockquote className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                "As a people leader and mentor, Kay was incredibly impactful for me at the early stage of my career."<br />
+                "He led with care and compassion, understood me at a deeper level, and helped me turn around my entire attitude and mindset toward the work and relationships."
+              </blockquote>
+              <div className="border-t border-gray-200 dark:border-gray-600 pt-4">
+                <div className="font-semibold text-gray-900 dark:text-white">Gabe Clapper</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Staff UX Designer at Google</div>
+                <div className="text-sm text-gray-500 dark:text-gray-500">2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Skills Section */}
-      <section className="py-20 bg-white dark:bg-gray-800">
+      <section className="py-16 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
