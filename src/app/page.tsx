@@ -28,17 +28,18 @@ export default async function Home() {
             {featuredProjects.length > 0 ? (
               featuredProjects.map((project) => (
                 <ProjectCard
-                  key={project.slug}
-                  title={project.frontmatter.title}
-                  role={project.frontmatter.role}
-                  description={project.frontmatter.description}
-                  image={project.frontmatter.image}
-                  imageCrop={project.frontmatter.imageCrop}
-                  tech={project.frontmatter.tech}
-                  github={project.frontmatter.github}
-                  demo={project.frontmatter.demo}
-                  slug={project.slug}
-                />
+                key={project.slug}
+                title={project.frontmatter.title}
+                role={project.frontmatter.role}
+                description={project.frontmatter.description}
+                image={project.frontmatter.image}
+                imageCrop={project.frontmatter.imageCrop}
+                tech={project.frontmatter.tech}
+                github={project.frontmatter.github}
+                demo={project.frontmatter.demo}
+                slug={project.slug}
+                featured={project.frontmatter.featured}
+              />
               ))
             ) : (
               <div className="col-span-full text-center py-12">
@@ -160,7 +161,7 @@ export default async function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:kayhof@outlook.com"
+              href="/contact"
               className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-emerald-700 transition-colors"
             >
               Get In Touch

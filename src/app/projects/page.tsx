@@ -3,6 +3,16 @@ import { getContentData } from '@/lib/utils'
 
 export default async function ProjectsPage() {
   const projects = await getContentData('projects')
+  
+  // Sort projects to show featured first, then by date
+  const sortedProjects = projects.sort((a, b) => {
+    // Featured projects first
+    if (a.frontmatter.featured && !b.frontmatter.featured) return -1
+    if (!a.frontmatter.featured && b.frontmatter.featured) return 1
+    
+    // Then sort by date (newest first)
+    return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
+  })
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-16">
@@ -18,9 +28,9 @@ export default async function ProjectsPage() {
         </div>
 
         {/* Projects Grid */}
-        {projects.length > 0 ? (
+        {sortedProjects.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
+            {sortedProjects.map((project) => (
               <ProjectCard
                 key={project.slug}
                 title={project.frontmatter.title}
@@ -28,10 +38,11 @@ export default async function ProjectsPage() {
                 description={project.frontmatter.description}
                 image={project.frontmatter.image}
                 imageCrop={project.frontmatter.imageCrop}
-                tech={project.frontmatter.tech || []}
+                tech={project.frontmatter.tech}
                 github={project.frontmatter.github}
                 demo={project.frontmatter.demo}
                 slug={project.slug}
+                featured={project.frontmatter.featured}
               />
             ))}
           </div>
@@ -75,7 +86,7 @@ export default async function ProjectsPage() {
         )}
 
         {/* Call to Action */}
-        {projects.length > 0 && (
+        {sortedProjects.length > 0 && (
           <div className="mt-16 text-center">
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-8">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
@@ -85,7 +96,7 @@ export default async function ProjectsPage() {
                 I'm always open to discussing new opportunities and exciting projects.
               </p>
               <a
-                href="mailto:your.email@example.com"
+                href="/contact"
                 className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-emerald-700 transition-colors inline-block"
               >
                 Get In Touch

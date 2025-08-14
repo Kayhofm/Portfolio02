@@ -11,6 +11,7 @@ interface ProjectCardProps {
   demo?: string
   slug: string
   imageCrop?: 'top' | 'center' | 'bottom' | 'contain'
+  featured?: boolean
 }
 
 export default function ProjectCard({
@@ -22,7 +23,8 @@ export default function ProjectCard({
   github,
   demo,
   slug,
-  imageCrop = 'center'
+  imageCrop = 'center',
+  featured = false
 }: ProjectCardProps) {
   const cropClass = {
     'top': 'object-cover object-top',
@@ -56,9 +58,16 @@ export default function ProjectCard({
 
         {/* Project Content */}
         <div className="p-6">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-            {title}
-          </h3>
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+              {title}
+            </h3>
+            {featured && (
+              <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400 italic">
+                Featured
+              </span>
+            )}
+          </div>
           
           {role && (
             <p className="text-lg font-medium text-emerald-600 dark:text-emerald-400 mb-2">
