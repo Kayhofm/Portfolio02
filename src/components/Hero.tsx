@@ -53,7 +53,7 @@ export default function Hero() {
             </h1>
             <p className="mt-6 text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
               <strong>Design Leader</strong> with 20+ years in AI and product innovation at Meta, Amazon, and Microsoft. 
-              I define strategy and vision, build and lead teams of 25+, and partner tightly with Product and Engineering to ship. 
+              I define strategy and vision, empower and mentor designers, and partner tightly with Product and Engineering to ship. 
               I scale design systems and stay hands-on to deliver 0→1 launches. 
               30+ patents across AI, voice, AR, and input.
             </p>
