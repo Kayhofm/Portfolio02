@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Videos (too large for git)
 public/videos/
+
+# not needed image
+public/images/_delete/
