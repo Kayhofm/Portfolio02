@@ -196,18 +196,20 @@ date: "2015-06-30"
   </div>
   
   <div>
-    <div className="flex justify-center items-center gap-8 mb-8">
+    <div className="flex justify-center items-center gap-18 mb-8 mt-18">
       <div className="flex flex-col items-center">
-        <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center mb-4">
-          <SpeakerIcon className="h-8 w-8 text-gray-600" />
-        </div>
+        <ClickableSpeakerIcon 
+          audioSrc="/audio/AlexaSalli_tts_03.wav" 
+          label="before" 
+        />
         <h3 className="text-xl font-bold text-emerald-400">before</h3>
       </div>
       
       <div className="flex flex-col items-center">
-        <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center mb-4">
-          <SpeakerIcon className="h-8 w-8 text-gray-600" />
-        </div>
+        <ClickableSpeakerIcon 
+          audioSrc="/audio/AlexaNewVoice.mp3" 
+          label="after" 
+        />
         <h3 className="text-xl font-bold text-emerald-400">after</h3>
       </div>
     </div>
