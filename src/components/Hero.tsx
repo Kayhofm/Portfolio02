@@ -6,7 +6,7 @@ export default function Hero() {
   // Design images for the top-right circle (smaller)
   const topCircleImages = [
     '/images/MetaGenUX.png',
-    '/images/Orion_recipe.webp',
+    '/images/Orion_recipeLossy.webp',
     '/images/MetaRBMinitialApp01.png',
     '/images/Alexa_GUI.png',
     '/images/Health_AP_Hero Page Devices-2.png',
@@ -15,11 +15,11 @@ export default function Hero() {
 
   // Design images for the bottom-left circle (larger)
   const bottomCircleImages = [
-    '/images/MetaCupAnimation.gif',
-    '/images/MetaColorcube.gif',
-    '/images/MetaCounterAnimation.gif',
+    '/images/MetaCupAnimationLossy.webp',
+    '/images/MetaColorcubeLossy.webp',
+    '/images/MetaCounterAnimationLossy.webp',
     '/images/MetaButtonPeek.gif',
-    '/images/MetaDoorAnimation.gif'
+    '/images/MetaDoorAnimationLossy.webp'
   ]
 
   const [currentTopImage, setCurrentTopImage] = useState(0)
