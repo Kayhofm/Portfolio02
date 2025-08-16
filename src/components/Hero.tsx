@@ -7,9 +7,9 @@ export default function Hero() {
   const topCircleImages = [
     '/images/MetaGenUX.png',
     '/images/Orion_recipeLossy.webp',
-    '/images/MetaRBMinitialApp01.png',
-    '/images/Alexa_GUI.png',
-    '/images/Health_AP_Hero Page Devices-2.png',
+    '/images/MetaRBMInitialApp01Square.webp',
+    '/images/EchoHeroSquare.webp',
+    '/images/Health_AP_Hero Page Devices-2Square.webp',
     '/images/Agency_HKM_InternationalHome.JPG'
   ]
 

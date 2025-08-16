@@ -20,7 +20,7 @@ export default async function Home() {
               Featured Projects
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Leading AI-powered product experiences that define new categories and shape the future of human-computer interaction.
+              Product experiences I've helped bring to life at Meta, Microsoft, and Amazon.
             </p>
           </div>
           
@@ -60,7 +60,7 @@ export default async function Home() {
               What People Say
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Trusted by leaders and designers across the industry to deliver exceptional design outcomes.
+              Feedback from designers and leaders I've had the privilege to work with.
             </p>
           </div>
           
