@@ -19,7 +19,7 @@ export default async function BlogPage() {
 
         {/* Blog Posts */}
         {posts.length > 0 ? (
-          <div className="space-y-8">
+          <div className="space-y-8 mb-12">
             {posts.map((post) => (
               <article
                 key={post.slug}
@@ -115,29 +115,33 @@ export default async function BlogPage() {
             </div>
           </div>
         )}
+      </div>
 
-        {/* Newsletter/CTA Section */}
-        {posts.length > 0 && (
-          <div className="mt-16 bg-gradient-to-r from-emerald-400 to-emerald-400 rounded-lg p-8 text-center text-white">
-            <h2 className="text-2xl font-bold mb-4">
-              Stay Updated
+        {/* CTA Section */}
+        <section className="py-20 bg-gray-50 dark:bg-gray-900">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Contact
             </h2>
-            <p className="mb-6 opacity-90">
-              Get notified when I publish new articles about web development and technology.
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+              I'd love to discuss these ideas further. Feel free to reach out.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500"
-              />
-              <button className="bg-white text-emerald-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-                Subscribe
-              </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-emerald-700 transition-colors"
+              >
+                Get In Touch
+              </a>
+              <a
+                href="/projects"
+                className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-8 py-3 rounded-lg font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+              >
+                View All Projects
+              </a>
             </div>
           </div>
-        )}
-      </div>
+        </section>
     </div>
   )
 }

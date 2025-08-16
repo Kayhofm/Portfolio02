@@ -57,7 +57,7 @@ export default async function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              What People Say
+              Recommendations
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Feedback from designers and leaders I've had the privilege to work with.
@@ -73,11 +73,12 @@ export default async function Home() {
                 </svg>
               </div>
               <blockquote className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                "Kay is a one-of-a-kind design leader—someone who not only pushes the boundaries of what’s possible but also ensures every detail is considered along the way. He has a rare ability to obsess over both strategy and execution, making complex ideas feel simple and innovative experiences feel inevitable."
+                "Kay is a one-of-a-kind design leader—someone who not only pushes the boundaries of what’s possible but also ensures every detail is considered along the way. 
+                He has a rare ability to obsess over both strategy and execution, making complex ideas feel simple and innovative experiences feel inevitable."
               </blockquote>
               <div className="border-t border-gray-200 dark:border-gray-600 pt-4">
                 <div className="font-semibold text-gray-900 dark:text-white">Oscar Murillo</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Senior Design Director, Oracle</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Senior Design Director at Oracle</div>
                 <div className="text-sm text-gray-500 dark:text-gray-500">2025</div>
               </div>
             </div>
@@ -91,7 +92,8 @@ export default async function Home() {
               </div>
               <blockquote className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                 "As a designer, Kay is curious and dedicated to his craft ... 
-                As a manager, and mentor, Kay fosters growth, curiosity, and excellence. His guidance has significantly impacted my design career. I wholeheartedly endorse Kay as a visionary leader and innovator in whatever industry he pursues."
+                As a manager, and mentor, Kay fosters growth, curiosity, and excellence. His guidance has significantly impacted my design career. 
+                I wholeheartedly endorse Kay as a visionary leader and innovator in whatever industry he pursues."
               </blockquote>
               <div className="border-t border-gray-200 dark:border-gray-600 pt-4">
                 <div className="font-semibold text-gray-900 dark:text-white">Annika Rodrigues</div>
@@ -118,6 +120,19 @@ export default async function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Design Philosophy Section */}
+      <section className="py-16 bg-gradient-to-br from-emerald-100 to-lightemerald-700 dark:from-gray-900 dark:to-gray-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+            Design Philosophy
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+            I believe the best design happens when we combine visionary thinking with rigorous process. Starting with deep user understanding, I develop a compelling vision for what's possible, then cycle through rapid prototyping and collaborative iteration. 
+            I create testable solutions early, gather feedback from diverse stakeholders, and refine both the vision and execution until we arrive at experiences that feel both intuitive and impactful.
+          </p>
         </div>
       </section>
 
