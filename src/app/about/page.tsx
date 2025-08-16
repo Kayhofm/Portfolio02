@@ -41,10 +41,6 @@ const aboutContent = `
       - 🤿 Under water scuba diving
       - 🏋️ At CrossFit
       - ✍️ Writing about design or health
-
-      ### Let's Connect
-
-      I'm always interested in new opportunities, collaborations, or just having a chat about design or technology. Feel free to reach out!
     </div>
 
     <div className="lg:col-span-1">
@@ -170,6 +166,32 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <MDXRemote source={aboutContent} components={mdxComponents} />
+      
+      {/* CTA Section */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Let's Work Together
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+            I'm always interested in new opportunities, collaborations, or just having a chat about design or technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-emerald-700 transition-colors"
+            >
+              Get In Touch
+            </a>
+            <a
+              href="/projects"
+              className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-8 py-3 rounded-lg font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+            >
+              View My Work
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
