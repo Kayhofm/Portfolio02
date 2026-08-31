@@ -1,14 +1,17 @@
 'use client'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
+    company: '' // honeypot — must stay empty
   })
-  
+
+  const mountedAt = useRef(Date.now())
+
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
@@ -32,14 +35,17 @@ export default function ContactPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          elapsed: Date.now() - mountedAt.current,
+        }),
       })
 
       const result = await response.json()
 
       if (response.ok) {
         setSubmitStatus('success')
-        setFormData({ name: '', email: '', subject: '', message: '' }) // Reset form
+        setFormData({ name: '', email: '', subject: '', message: '', company: '' }) // Reset form
       } else {
         setSubmitStatus('error')
         setErrorMessage(result.error || 'Failed to send email')
@@ -92,6 +98,20 @@ export default function ContactPage() {
           )}
 
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Honeypot — hidden from real users, bots tend to fill it */}
+            <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
+              <label htmlFor="company">Company</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                tabIndex={-1}
+                autoComplete="off"
+                value={formData.company}
+                onChange={handleChange}
+              />
+            </div>
+
             {/* Name Field */}
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
