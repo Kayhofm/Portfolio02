@@ -18,7 +18,7 @@
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
     "next": "15.4.2",
-    "next-mdx-remote": "^5.0.0",
+    "next-mdx-remote": "^6.0.0",
     "pdfjs-dist": "^5.4.54",
     "react": "19.1.0",
     "react-dom": "19.1.0",
