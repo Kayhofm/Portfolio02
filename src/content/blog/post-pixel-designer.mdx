@@ -1,0 +1,27 @@
+---
+title: "The Post-Pixel Designer"
+description: "Rules, not pixels: what changes about design craft when the system produces the designs"
+date: "2026-09-30"
+tags: ["AI/ML", "Generative UI", "Thought Leadership"]
+author: "Kay Hofmeester"
+readTime: "2 min read"
+featured: false
+---
+
+A few years ago I started prototyping with Generative UI; interfaces where AI assembles the experience at runtime rather than one I hand-design in advance. Lately this work has entered a new phase of real application. It's the most complex kind of design work I've done in a while, for a specific reason.
+
+The obvious shift is the output: instead of a design, I'm creating a system that produces designs. That's easy to say and hard to really understand until you're in it. The less obvious shift is where the craft lives now.
+
+In traditional UX, the artifact is the review surface. You look at the design, and either it's right or it isn't. Every failure mode is visible in the same place you'd catch it, a broken layout, a missing state, or an inaccessible contrast ratio. The feedback loop is tight because the thing you designed and the thing you're evaluating are the same object.
+
+GenUI breaks that loop. What I design now is a set of rules, a component grammar, interaction constraints, fallback behaviors, quality gates, and what gets produced is different every time, per user, per context. The system can generate a hundred outputs that all technically satisfy my rules and still range from "genuinely good" to "plausible but wrong", wrong on accessibility, wrong on brand tone, wrong on the actual meaning of the data it's presenting.
+
+That's the idea I keep coming back to: the designer's quality bar is met until the system breaks. You don't get the comfort of "I looked at it and it's fine." You only get "I defined constraints tight enough that fine is the default outcome, and I have a way to catch it when it isn't."
+
+Practically, that's pushed me toward thinking less about pixels and more about behavior: What should the system never do, regardless of prompt or context? What's the evaluation loop that tells me quality meets the bar, since I can't eyeball every output?
+
+None of this makes the craft less important; if anything it raises the stakes, because one bad constraint produces an entire distribution of bad outputs. It's just a different kind of craft. Rules, not pixels.
+
+Still early on this. If you're building GenUI quality gates for systems you don't fully control the output of, I'd like to compare notes.
+
+*Originally published on [LinkedIn](https://www.linkedin.com/pulse/post-pixel-designer-kay-hofmeester-lg9je/).*

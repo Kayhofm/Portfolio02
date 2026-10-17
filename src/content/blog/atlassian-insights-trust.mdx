@@ -1,0 +1,83 @@
+---
+title: "Designing for Trust"
+description: "How we unified three data paradigms into Atlassian's Insights app"
+date: "2026-10-07"
+tags: ["AI/ML", "Data", "Thought Leadership"]
+author: "Kay Hofmeester"
+readTime: "5 min read"
+featured: false
+---
+
+When teams talk about artificial intelligence in business analytics, the conversation almost always centers on generation: How quickly can an LLM turn a natural language prompt into a SQL query or a bar chart?
+
+While generative speed is impressive in a product demo, it is not what makes an analytics tool successful in daily enterprise workflows.
+
+The real bottleneck is defensibility.
+
+If an engineering director presents a velocity chart in an executive review and cannot instantly explain the metric's definition, data freshness, or underlying lineage, the data loses believability. If an AI generates a chart that looks plausible but cannot be verified, users quickly lose confidence.
+
+With the launch of the Insights app at Atlassian, our design team spent the past year confronting a fundamental challenge: How do you design an interface that makes AI-driven insights verifiable by default?
+
+The answer required solving a structural design problem first: unifying three separate mental models into one cohesive experience.
+
+## 1. The Root Cause of Distrust: Fragmented Data Context
+
+Traditional enterprise data stacks suffer from fragmentation of context. Typically:
+
+- **Data engineers and analysts** live in data catalogs and modeling environments, defining governance, schemas, and metric definitions.
+- **Specialist power users** write complex SQL queries in BI tools to build custom reports.
+- **Team leads and business stakeholders** consume isolated, static charts embedded in dashboards or wiki pages.
+
+Because these three disciplines operate in separate tools, context is stripped away. A chart on a dashboard becomes an orphan: no one viewing it knows when the data was last refreshed, which tables were queried, or what logic was applied.
+
+When you introduce AI into a fragmented environment, it amplifies the confusion. Asking an AI agent to answer a question across disconnected systems often produces plausible-sounding numbers without a transparent source of truth.
+
+To solve the trust problem, we realized that adding an AI chat interface was not enough. We needed to unify the entire data workflow into a single canvas.
+
+## 2. The Convergence: Merging Three Mental Models
+
+Over the past year, our design and product teams worked to bring three distinct capabilities together into a single Atlassian experience:
+
+- **Deep Analytics:** The SQL querying and data modeling power of Atlassian Analytics.
+- **Team-Level Visualization:** Dynamic, embeddable charts designed for daily tracking.
+- **AI-Ready Data Management:** Leveraging the semantic engine and lineage capabilities we brought in with Secoda to provide the enterprise-grade context AI needs to be accurate.
+
+Merging these capabilities meant reconciling conflicting user personas. A data analyst needs high-density tables and direct SQL control; an engineering manager needs to glance at sprint burndown without deciphering database joins; an AI agent needs rich semantic metadata to interpret user intent accurately.
+
+We approached this through progressive disclosure and context-first navigation. Rather than treating data catalogs as back-office administration tools, we made metadata and lineage accessible directly from the visual canvas.
+
+## 3. The Core Tenets of Trust-Centered UX
+
+Unifying the underlying platform allowed us to establish clear UI patterns focused specifically on trust and transparency.
+
+### Provenance by Default
+
+Every chart, summary, and table displays its pedigree clearly. With one click or hover, users can inspect:
+
+- Data freshness and last sync timestamp
+- The exact source tables and data models used
+- The designated owner and verified definition of each metric
+
+### Transparent AI Reasoning
+
+When users query data using natural language, the system does not present a single, unexplained number. Instead, the UI exposes the step-by-step logic: how the question was interpreted, which filters were applied, and which entities from the Teamwork Graph were matched. Users can audit the AI's reasoning path and edit the underlying parameters directly.
+
+### Graceful Fallback and Coexistence
+
+AI should augment a workflow. We designed the Insights app with a robust AI-optional architecture: if an organization chooses not to use AI features, the product remains a comprehensive, intuitive home for dashboards, data discovery, and reporting.
+
+## 4. Craft at the Core: Bridging Vision and Reality
+
+Designing a unified system on paper is only half the battle; the real craft lies in execution. Over the final development cycles leading up to General Availability, Design and Engineering partnered closely to raise the quality bar across every interaction.
+
+Design filed more than 300 targeted QA tickets covering empty states, micro-interactions, layout density, and visual hierarchy, with engineering closing and deploying over 200 fixes ahead of launch. In complex enterprise tools, trust is easily broken by small inconsistencies or laggy interactions. Treating design QA as a shared, continuous discipline was essential to shipping an experience that feels polished and dependable.
+
+## Looking Ahead: The Changing Role of Product Design
+
+The shift toward AI-assisted software is changing the nature of product design. Our job is moving away from drawing rigid, static screens and moving toward designing dynamic, verifiable systems.
+
+When interfaces are assembled dynamically and insights are generated on the fly, designers must define the guardrails, the semantic rules, and the trust architecture that allow users to interrogate and rely on the software.
+
+Data only creates value when teams have the confidence to act on it. By anchoring AI in verifiable context and transparent craft, we can build tools that teams genuinely trust.
+
+*Originally published on [LinkedIn](https://www.linkedin.com/pulse/designing-trust-how-we-unified-three-data-paradigms-app-hofmeester-mi1qc/).*
