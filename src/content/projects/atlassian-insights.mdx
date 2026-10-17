@@ -1,0 +1,140 @@
+---
+title: "Atlassian Insights"
+role: "Senior Product Design Manager"
+description: "Unifying three data paradigms into one trusted canvas for analytics, visualization & AI insights."
+image: "/images/Insights app/Insights_gallery.webp"
+tech: ["AI", "data", "enterprise"]
+featured: true
+date: "2026-01-01"
+---
+
+<ImageGallery>
+  <div>
+    ## Designing for Trust
+
+    - **Role:** Senior Product Design Manager  
+    - **Timeline:** January 2026 to launch in October 2026; work is ongoing  
+    - **Goal:** Make AI-driven insights verifiable by default  
+  </div>
+  <div>
+    When teams talk about AI in business analytics, the conversation centers on generation: how quickly can an LLM turn a prompt into a SQL query or a bar chart? That's impressive in a demo, but it isn't what makes an analytics tool succeed in daily enterprise workflows.
+
+    The real bottleneck is defensibility. If an engineering director can't explain a metric's definition, data freshness, or lineage in an executive review, the data loses believability.
+  </div>
+</ImageGallery>
+
+<ImageGallery>
+  <div>
+    ### The Root Cause of Distrust
+
+    Traditional enterprise data stacks fragment context:
+
+    - **Data engineers and analysts** live in catalogs and modeling environments, defining governance, schemas, and metric definitions  
+    - **Specialist power users** write complex SQL in BI tools to build custom reports  
+    - **Team leads and stakeholders** consume static charts embedded in dashboards or wiki pages  
+
+    Because these disciplines work in separate tools, context is stripped away. A chart becomes an orphan: no one knows when it was last refreshed, which tables were queried, or what logic was applied. Adding AI to that environment amplifies the confusion with plausible-sounding numbers and no transparent source of truth.
+
+    An AI chat interface alone wasn't enough. We needed to unify the whole data workflow into a single canvas.
+  </div>
+
+  <MDXImage
+    src="/images/Insights app/Insights_img01.png"
+    alt="Select data source dialog in the Insights app"
+  />
+</ImageGallery>
+
+<ImageGallery>
+  <div>
+    ### The Convergence: Three Mental Models
+
+    The design team brought three capabilities together in one Atlassian experience:
+
+    - **Deep Analytics:** The SQL querying and data modeling power of Atlassian Analytics  
+    - **Team-Level Visualization:** Dynamic, embeddable charts designed for daily tracking  
+    - **AI-Ready Data Management:** The semantic engine and lineage capabilities brought in with the Secoda acquisition, giving AI the enterprise-grade context it needs to be accurate  
+
+    Merging them meant reconciling conflicting requirements. An analyst needs dense tables and direct SQL control; an engineering manager needs to glance at sprint burndown without deciphering joins; an AI agent needs rich semantic metadata to interpret intent.
+  </div>
+
+  <MDXVideo
+    src="https://res.cloudinary.com/dcrb9u53g/video/upload/q_auto,f_auto/v1792208646/Insights_video_chh3zg.mp4"
+    autoplay={true}
+    loop={true}
+    muted={true}
+    className="border border-gray-300 dark:border-gray-600"
+  />
+</ImageGallery>
+
+<ImageGallery>
+  <div>
+    ### Core Tenets of Trust-Centered UX
+
+    **Provenance by default.** Every chart, summary, and table displays its pedigree. With one click or hover, users can inspect:
+
+    - Data freshness and last sync timestamp  
+    - The exact source tables and data models used  
+    - The designated owner and verified definition of each metric  
+
+    **Transparent AI reasoning.** The system never presents a single unexplained number. The UI exposes the step-by-step logic: how the question was interpreted, which filters were applied, and which Teamwork Graph entities were matched. Users can audit the reasoning path and edit the underlying parameters directly.
+
+    **Graceful fallback and coexistence.** AI should augment a workflow. The Insights app is AI-optional: if an organization chooses not to use AI, it remains a complete home for dashboards, data discovery, and reporting.
+  </div>
+
+  <MDXImage
+    src="/images/Insights app/Insights_img02.png"
+    alt="AI answer showing its steps, generated SQL, and sources"
+  />
+</ImageGallery>
+
+<ImageGallery>
+  <div>
+    ### Natural language to reusable dashboard
+
+    Using natural language, any user can query complex databases, and get results in text, tables and charts. They can inspect the data provenance and lineage, edit the generated SQL, and save the result as a reusable chart or dashboard.
+
+    We used progressive disclosure and context-first navigation. Rather than treating data catalogs as back-office administration, we made metadata and lineage accessible directly from the visual canvas.
+  </div>
+
+  <MDXVideo
+    src="https://res.cloudinary.com/dcrb9u53g/video/upload/q_auto,f_auto/v1792208644/Insights_video2_x4ybej.mp4"
+    autoplay={true}
+    loop={true}
+    muted={true}
+    className="border border-gray-300 dark:border-gray-600"
+  />
+</ImageGallery>
+
+<ImageGallery>
+  <div>
+    ### Craft at the Core
+
+    Designing a unified system on paper is only half the battle. In the final development cycles before General Availability, Design and Engineering partnered closely to raise the quality bar on every interaction.
+
+    - ** more than 300+ QA tickets** filed by Design, covering empty states, micro-interactions, layout density, and visual hierarchy  
+    - ** over 200+ fixes** closed and deployed by Engineering ahead of launch  
+
+    In complex enterprise tools, trust is easily broken by small inconsistencies or laggy interactions. Treating design QA as a shared, continuous discipline was essential to shipping something polished and dependable.
+  </div>
+
+  <MDXVideo
+    src="https://res.cloudinary.com/dcrb9u53g/video/upload/q_auto,f_auto/v1792208645/Insights_video3_cio3qb.mp4"
+    autoplay={true}
+    loop={true}
+    muted={true}
+    className="border border-gray-300 dark:border-gray-600"
+  />
+</ImageGallery>
+
+<ImageGallery>
+  <div>
+    ### Looking Ahead: The Changing Role of Product Design
+
+    AI-assisted software is changing the nature of design. The job is moving away from drawing rigid, static screens and toward designing dynamic, verifiable systems.
+
+    When interfaces are assembled dynamically and insights are generated on the fly, designers must define the guardrails, semantic rules, and trust architecture that let users interrogate and rely on the software.
+  </div>
+  <div>
+    Data only creates value when teams have the confidence to act on it. By anchoring AI in verifiable context and transparent craft, we can build tools that teams genuinely trust.
+  </div>
+</ImageGallery>
