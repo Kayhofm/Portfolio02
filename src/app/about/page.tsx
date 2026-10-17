@@ -9,7 +9,7 @@ const aboutContent = `
 
       ### Hello! I'm Kay Hofmeester
 
-      Product Design Leader with 20+ years of expertise in product innovation, AI, and managing design organizations at scale. Proven success in defining strategy and vision, building high-performing teams of 25+, and driving cross-functional excellence with Product and Engineering. Expert in establishing scalable design systems, directly contributing to execution, championing user-centered design principles, and delivering industry-leading consumer products at Meta, Amazon, and Microsoft that enhance user engagement while maintaining quality.
+      Product Design Leader at Atlassian with expertise in product innovation, AI, and managing design organizations at scale. Proven success in defining strategy and vision, building high-performing teams of 25+, and driving cross-functional excellence with Product and Engineering. Expert in establishing scalable design systems, directly contributing to execution, championing user-centered design principles, and delivering industry-leading consumer products at Atlassian, Meta, Amazon, and Microsoft that enhance user engagement while maintaining quality.
 
       **Strategic Vision and Executive Leadership:** Defined long-term design strategy and vision, collaborating with VP- / CEO-level executives (Bezos, Zuckerberg) to drive cross-functional excellence, align design efforts with business objectives at leading tech companies, and enhance user engagement
 
@@ -62,7 +62,7 @@ const aboutContent = `
         ### Quick Facts
 
         **📍 Location:** Seattle, WA  
-        **💼 Experience:** 20+ years  
+        **💼 Current Role:** Senior Product Design Manager, Atlassian  
         **🎓 Education:** Delft University of Technology  
         **☕ Favorite Drink:** Coffee  
 

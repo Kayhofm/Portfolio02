@@ -14,7 +14,7 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   title: 'Kay Hofmeester - Product Design Leader & Product Strategist',
-  description: 'Senior Product Design Leader with 20+ years experience launching innovative products at Meta, Amazon, and Microsoft. Expert in AI/ML design, AR/VR experiences, and scaling design teams. Based in Seattle, WA.',
+  description: 'Senior Product Design Leader at Atlassian, previously launching innovative products at Meta, Amazon, and Microsoft. Expert in AI/ML design, AR/VR experiences, and scaling design teams. Based in Seattle, WA.',
 }
 
 export default function RootLayout({
