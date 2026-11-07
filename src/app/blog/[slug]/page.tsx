@@ -123,6 +123,39 @@ export default async function BlogPage({ params }: BlogPageProps) {
         </>
       )
     },
+    MDXVideo: ({ src, width = "full", caption, captions, autoplay = false, loop = false, muted = true, controls = true, className = "" }: any) => {
+      let widthClass = "w-full"
+      if (width === "1/2") widthClass = "w-1/2"
+      if (width === "1/3") widthClass = "w-1/3"
+      if (width === "2/3") widthClass = "w-2/3"
+      if (width === "1/4") widthClass = "w-1/4"
+      if (width === "3/4") widthClass = "w-3/4"
+
+      return (
+        <>
+          <video
+            className={`${widthClass} h-auto rounded-lg mb-4 mx-auto block ${className}`}
+            autoPlay={autoplay}
+            loop={loop}
+            muted={muted}
+            controls={controls}
+            playsInline
+          >
+            <source src={src} type="video/mp4" />
+            <source src={src.replace('.mp4', '.webm')} type="video/webm" />
+            {captions && (
+              <track kind="captions" src={captions} srcLang="en" label="English" default />
+            )}
+            Your browser does not support the video tag.
+          </video>
+          {caption && (
+            <span className="block text-center text-sm text-gray-600 dark:text-gray-400 mb-6 italic">
+              {caption}
+            </span>
+          )}
+        </>
+      )
+    },
     TwoColumn: ({ children }: any) => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 items-start">
         {children}
@@ -223,9 +256,6 @@ a: ({ href, children, ...props }: any) => {
 
         {/* More Posts */}
         <div className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-            More Posts
-          </h2>
           <div className="flex justify-center">
             <Link
               href="/blog"

@@ -1,0 +1,127 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.780
+Hi, I'm Kumudika, a product designer on
+Atlassian's Data Experiences team, and I
+
+00:00:04.780 --> 00:00:10.000
+wanted to share an early exploration of
+how we design charts for communication.
+
+00:00:10.000 --> 00:00:14.290
+Our existing charts support analytical
+work, and in our library revamp earlier
+
+00:00:14.290 --> 00:00:19.328
+this year, we also did explore
+informational charts to make insights more
+
+00:00:19.328 --> 00:00:23.400
+approachable for people without
+deep technical expertise.
+
+00:00:23.400 --> 00:00:27.640
+Seeing these two side-by-side did
+expose a gap, where we found that there's
+
+00:00:27.640 --> 00:00:31.813
+a need for more expressive charts that
+help people communicate a specific
+
+00:00:31.813 --> 00:00:37.960
+message or tell a story with data. This is where narrative charts came in.
+
+00:00:37.960 --> 00:00:42.360
+We studied the competitive landscape
+and explored how much expression
+
+00:00:42.360 --> 00:00:47.726
+different contexts need. We mapped
+out an expressive matrix from restrained
+
+00:00:47.726 --> 00:00:53.020
+and data forward to bold and story forward
+rather than imposing one visual tone
+
+00:00:53.020 --> 00:00:58.360
+on every message. That led to
+these three experimental styles, Tufte,
+
+00:00:58.360 --> 00:01:05.156
+Charlie, and Sumi, where Tufte is more
+minimal, quiet, and it has a serious tone
+
+00:01:05.156 --> 00:01:10.790
+for technical, restrained communication.
+Charlie is for a friendlier tone,
+
+00:01:10.790 --> 00:01:15.560
+more approachable voice, which
+uses our branding colors.
+
+00:01:15.560 --> 00:01:21.190
+Finally, Sumi is high contrast and
+expressive, so this is useful for when
+
+00:01:21.190 --> 00:01:28.880
+our customers need a story that demands
+a bolder expression, like this here.
+
+00:01:28.880 --> 00:01:32.320
+Defining these styles
+was only half the problem.
+
+00:01:32.320 --> 00:01:36.720
+Most people have limited time, and turning
+data into a clear story takes skill
+
+00:01:36.720 --> 00:01:42.480
+that most don't have time for. This
+is why we started exploring AI-generated
+
+00:01:42.480 --> 00:01:48.884
+charts, to lower that barrier with the
+core principle that AI proposes and our
+
+00:01:48.884 --> 00:01:53.417
+defined system helps to constrain. We're currently exploring a prototype
+
+00:01:53.417 --> 00:01:59.046
+where you supply your data, you state
+your goal, and AI will turn that into a
+
+00:01:59.046 --> 00:02:02.740
+first draft, and then you could
+refine it however you like.
+
+00:02:02.740 --> 00:02:06.640
+AI here does not make
+up numbers or visuals.
+
+00:02:06.640 --> 00:02:11.480
+It will still work within our defined
+narrative chart system, so every draft
+
+00:02:11.480 --> 00:02:15.800
+will follow the same rules,
+which you could see here.
+
+00:02:15.800 --> 00:02:19.580
+You can see that these are early
+explorations, not a final product, and
+
+00:02:19.580 --> 00:02:24.713
+we're still learning how to make
+our data storytelling easier without
+
+00:02:24.713 --> 00:02:29.160
+compromising trust or people's
+control over these results.
+
+00:02:29.160 --> 00:02:33.160
+We'll share more as we test and
+iterate, but this was an overview
+
+00:02:33.160 --> 00:02:37.320
+of what we've been working on. Thank you so much for watching!
+
